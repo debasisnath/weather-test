@@ -10,7 +10,7 @@ searchbox.addEventListener('keypress', setQuery);
 ///////////////////////my  8d5e966b6a2s8i9s //////////////////////
 const getResultsByLatLong = async (lat, lon) => {
   console.log(lat, lon);
-  const response = await fetch(`${api.base}weather?lat=${lat}&lon=${lon}&appid=${api.key}`);
+  const response = await fetch(`${api.base}weather?lat=${lat}&lon=${lon}&appid=${api.key}&units=metric`);
   const weather = await response.json();
   // console.log(weather);
   displayResults(weather);
